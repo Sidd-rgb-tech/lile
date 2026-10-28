@@ -1,0 +1,7 @@
+{
+  "name": "CHANGE360 — Native Android Social Awareness App",
+  "description": "CHANGE360 is an AI-powered social awareness and positive-action native Android platform. Learn, act, track contributions, generate impact posters, and inspire real-world change.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

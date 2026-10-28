@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CHANGE360</string>
+    <string name="tagline">Learn. Act. Track. Inspire.</string>
+    <string name="mission_statement">Turn awareness into meaningful action and make positive contributions easier to understand, practise, measure, and share.</string>
+    
+    <!-- Navigation labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_assistant">AI Assistant</string>
+    <string name="nav_challenges">Challenges</string>
+    <string name="nav_impact">My Impact</string>
+    <string name="nav_poster">Create Poster</string>
+    
+    <!-- Proof of Impact framework -->
+    <string name="proof_tier_learning">Learning Completed</string>
+    <string name="proof_tier_self_reported">Self-Reported Action</string>
+    <string name="proof_tier_verified">Verified Activity</string>
+    <string name="proof_tier_measured">Measured Outcome</string>
+</resources>

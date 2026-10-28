@@ -1,0 +1,1030 @@
+# PROJECT: CHANGE360 — COMPLETE NATIVE ANDROID APPLICATION
+
+## 1. YOUR ROLE AND OBJECTIVE
+
+Act as a senior Android application developer, UI/UX designer, AI engineer, database architect, and product designer.
+
+Build a complete, functional, polished, native Android application called **CHANGE360**.
+
+CHANGE360 is an AI-powered social awareness and positive-action platform that helps people understand important issues, participate in meaningful activities, track their contributions, and inspire others to create positive change.
+
+**IMPORTANT: This project is exclusively for Android. Build a native Android application, not a website, web application, or responsive web dashboard.**
+
+The primary objective is to create an Android app that users can install on their phones, interact with, and eventually distribute through the Google Play Store.
+
+Do not merely create a visual prototype or a collection of static screens. Implement real navigation, functional buttons, data persistence, challenge workflows, AI interactions, progress tracking, and poster generation.
+
+Where external services require credentials or configuration, implement the integration structure and provide a functional demo mode rather than leaving the feature blank.
+
+---
+
+# 2. ANDROID TECHNOLOGY STACK
+
+Use the following technology stack wherever supported by the Android development environment:
+
+- **Programming language:** Kotlin.
+- **UI framework:** Jetpack Compose.
+- **Design system:** Material 3.
+- **Architecture:** MVVM with a clear separation between UI, business logic, and data layers.
+- **Navigation:** Native Android navigation using Navigation Compose.
+- **Asynchronous operations:** Kotlin Coroutines and Flow.
+- **Local database:** Room for structured offline data.
+- **Preferences:** DataStore for user settings and preferences.
+- **Backend:** Firebase Authentication and Cloud Firestore, when configured.
+- **AI:** Gemini through an appropriate secure integration.
+- **Image generation and editing:** Native Android Canvas and image-processing utilities for the poster generator.
+- **Charts:** Native Compose-compatible chart components.
+- **Image saving:** Android MediaStore or an appropriate Android document-saving mechanism.
+- **Notifications:** Android notification APIs, with user permission where required.
+- **Connectivity:** Proper handling of offline and online states.
+
+Use stable, mutually compatible dependencies.
+
+Generate a complete Android Studio-compatible project, including Gradle configuration, AndroidManifest.xml, application resources, Kotlin source files, and all necessary supporting files.
+
+Do not use React, React Native, Expo, HTML, CSS, or a website packaged inside an Android WebView as the primary implementation.
+
+The generated project must be designed to compile into an Android application package and, where the environment supports it, an Android App Bundle.
+
+---
+
+# 3. APP IDENTITY AND PURPOSE
+
+## App name
+CHANGE360
+
+## Tagline
+**Learn. Act. Track. Inspire.**
+
+## Mission
+Turn awareness into meaningful action and make positive contributions easier to understand, practise, measure, and share.
+
+## Core concept
+
+CHANGE360 combines:
+
+1. An AI-powered awareness assistant.
+2. Educational content and practical action guides.
+3. Interactive challenges and activities.
+4. Points, badges, streaks, and achievements.
+5. Personal impact tracking.
+6. AI-assisted awareness content creation.
+7. A signature impact poster generator.
+8. School, workplace, and community campaigns.
+9. Impact stories and community inspiration.
+10. Responsible, transparent reporting of progress.
+
+The application should encourage people to move from learning about an issue to taking action and reflecting on the result.
+
+## Target audience
+
+Design the application for:
+- School and college students.
+- Teachers and educators.
+- Families.
+- Young adults.
+- Working professionals.
+- Community volunteers.
+- NGOs and social organisations.
+- Anyone interested in creating positive social change.
+
+Use clear language that is accessible to beginners while still offering meaningful information to older users.
+
+---
+
+# 4. A GENERAL SOCIAL AWARENESS APPLICATION
+
+CHANGE360 must remain a broad, general-purpose social awareness application.
+
+It must not be designed exclusively for women, health, safety, environmental protection, or any single cause.
+
+Include the following awareness categories:
+
+1. Environment and sustainability.
+2. Waste management and recycling.
+3. Climate awareness and conservation.
+4. Education and literacy.
+5. Equality and inclusion.
+6. Digital literacy and online safety.
+7. Cyberbullying awareness.
+8. Road safety.
+9. Community service and volunteering.
+10. Physical health and healthy habits.
+11. Mental well-being and stress management.
+12. Women's safety and health.
+13. Child safety and protection.
+14. Civic responsibility.
+15. Animal welfare.
+16. Disaster preparedness.
+17. Responsible technology use.
+18. Public health awareness.
+19. Financial awareness and responsible consumption.
+20. School and community improvement.
+
+Women’s safety and health should be meaningful categories within the application, but they must not dominate the home screen, app branding, content recommendations, or overall user experience.
+
+Allow users to explore different topics based on their interests.
+
+---
+
+# 5. NATIVE ANDROID DESIGN AND USER EXPERIENCE
+
+Create a modern, polished, visually attractive Android interface.
+
+## Visual identity
+
+Use:
+- Teal, green, blue, and white as the main colour palette.
+- Clean cards with rounded corners.
+- Consistent spacing and typography.
+- Modern Material 3 components.
+- Simple, meaningful icons.
+- Subtle animations.
+- Clear visual hierarchy.
+- Attractive progress indicators.
+- Accessible text contrast.
+- Appropriate touch-target sizes.
+- Loading, empty, success, and error states.
+
+Avoid clutter, excessive gradients, tiny text, and unnecessary animations.
+
+## Android-specific requirements
+
+Implement:
+- Native Android system navigation.
+- Edge-to-edge layouts where appropriate.
+- A proper status bar and navigation bar appearance.
+- A native bottom navigation bar for the primary sections.
+- Android back-button behaviour.
+- Keyboard-aware forms.
+- Scrollable screens.
+- Portrait-first layouts suitable for smartphones.
+- Responsive layouts for different Android screen sizes.
+- System dark mode support, if feasible.
+- Appropriate permission requests.
+- Android-compatible image saving and sharing.
+- Accessible controls and content descriptions.
+- Graceful behaviour when the device is offline.
+
+Do not require users to log in before they can explore the core demonstration features.
+
+Include a guest/demo mode.
+
+---
+
+# 6. MAIN NAVIGATION
+
+Create these primary destinations using native Android navigation:
+
+1. Home.
+2. AI Assistant.
+3. Challenges.
+4. My Impact.
+5. Create Poster.
+
+Include additional accessible destinations for:
+- Campaigns.
+- Impact Stories.
+- Notifications.
+- Profile.
+- Settings.
+- Help and About.
+
+Use a clear navigation hierarchy so the app remains easy to use.
+
+Every visible navigation item must open the correct screen.
+
+Do not create buttons that look functional but do nothing.
+
+---
+
+# 7. HOME DASHBOARD
+
+Build a personalised home dashboard.
+
+The dashboard should include:
+
+### Welcome section
+Display a welcome message and the user's profile name, or a generic greeting in guest mode.
+
+### Daily inspiration
+Display a short, meaningful awareness message.
+
+Allow the content to vary across different categories.
+
+### Daily action
+Recommend one practical action the user can complete that day.
+
+Examples:
+- Carry a reusable water bottle.
+- Help someone understand a digital safety risk.
+- Read about road safety.
+- Donate books in good condition.
+- Spend time supporting a community activity.
+- Practise a healthy daily habit.
+
+### Quick access cards
+Provide shortcuts to:
+- Ask the AI Assistant.
+- Explore Challenges.
+- View My Impact.
+- Create an Impact Poster.
+- Discover Campaigns.
+
+### Progress overview
+Show:
+- Total points.
+- Completed challenges.
+- Current streak.
+- Earned badges.
+- Recent activities.
+
+### Recommended content
+Display challenges and educational topics based on user interests.
+
+### Featured campaign
+Show a school, workplace, environmental, educational, health, or community campaign.
+
+Use sample content in demo mode and clearly label sample statistics as demonstration data.
+
+---
+
+# 8. AI AWARENESS ASSISTANT
+
+Build a functional AI-powered conversational assistant.
+
+Users should be able to type questions, submit messages, and receive readable responses.
+
+The interface should include:
+- A chat screen.
+- Message bubbles.
+- A text input field.
+- A send button.
+- Loading indicators.
+- Error handling.
+- Conversation history.
+- Suggested questions.
+- A clear-chat option.
+- Copy-response functionality.
+- A way to turn useful responses into action plans.
+
+## Assistant response modes
+
+Provide four modes:
+
+### A. Explain Simply
+Explain a topic in beginner-friendly language.
+
+### B. Detailed Explanation
+Provide a more comprehensive explanation with examples.
+
+### C. Practical Action Guide
+Suggest concrete actions the user can take.
+
+### D. Quiz Me
+Generate questions to test the user's understanding.
+
+## Suggested questions
+
+Display selectable questions such as:
+- How can I reduce plastic waste?
+- How can I identify online scams?
+- How can I promote road safety?
+- What can students do to improve their community?
+- How can I support someone experiencing cyberbullying?
+- What are some simple habits for better health?
+- How can schools conduct awareness campaigns?
+- How can I help protect local biodiversity?
+
+## AI integration requirements
+
+Use Gemini through a suitable, secure architecture supported by the selected Android environment.
+
+Do not expose secret API keys in source code, application resources, or the distributed APK.
+
+If secure live AI integration is not configured:
+- Use clearly labelled demonstration responses.
+- Display a helpful configuration message when necessary.
+- Keep the rest of the application functional.
+- Do not pretend that a static response came from a live AI model.
+
+AI responses must:
+- Be relevant to the user's question.
+- Use readable formatting.
+- Avoid fabricated statistics and sources.
+- Distinguish facts from suggestions.
+- Recommend qualified professional help when appropriate.
+- Avoid presenting general health information as a diagnosis.
+- Avoid pretending to provide emergency response services.
+- Give safe, practical information about sensitive topics.
+
+The assistant should cover all CHANGE360 categories rather than focusing on one cause.
+
+---
+
+# 9. CHALLENGES AND ACTIVITIES
+
+Create a fully functional challenges system.
+
+Include at least 20 sample challenges distributed across different awareness categories.
+
+Examples:
+
+### Environment
+- Complete a plastic-free day.
+- Identify three ways to save water.
+- Conduct a household waste-separation activity.
+- Plant and document a suitable native plant.
+
+### Education
+- Share a useful learning resource.
+- Help a peer understand a difficult concept.
+- Organise a small book-sharing activity.
+
+### Digital safety
+- Learn to recognise phishing messages.
+- Review privacy settings on an account.
+- Complete a cyberbullying awareness quiz.
+
+### Road safety
+- Learn basic pedestrian safety rules.
+- Create a road safety awareness poster.
+
+### Community service
+- Help organise a local cleanliness activity.
+- Participate in a community support initiative.
+- Identify a local problem and propose a solution.
+
+### Health and well-being
+- Practise a healthy daily routine.
+- Learn basic stress-management techniques.
+- Complete a health-awareness quiz.
+
+### Women's safety and health
+- Learn about respectful behaviour and personal boundaries.
+- Explore reliable women's health information.
+- Create a respectful awareness campaign.
+
+### Civic responsibility
+- Learn how to report a local civic issue through appropriate official channels.
+- Understand responsible public-space use.
+
+## Challenge cards
+
+Each challenge must display:
+- Title.
+- Category.
+- Difficulty.
+- Estimated duration.
+- Short description.
+- Learning objective.
+- Instructions.
+- Expected outcome.
+- Points available.
+- Completion status.
+
+## Challenge workflow
+
+Users must be able to:
+1. Browse challenges.
+2. Search challenges.
+3. Filter by category.
+4. Filter by difficulty.
+5. Open a challenge.
+6. Read its instructions.
+7. Start the challenge.
+8. Track its status.
+9. Complete the required activity.
+10. Submit a completion reflection or answer a quiz.
+11. Receive points when eligible.
+12. See the updated result in My Impact.
+
+Use statuses such as:
+- Not Started.
+- In Progress.
+- Completed.
+- Awaiting Verification.
+- Verified, where applicable.
+
+Prevent users from receiving duplicate rewards for completing the same challenge repeatedly.
+
+Support offline completion and synchronisation when online, if the data architecture permits it.
+
+---
+
+# 10. POINTS, BADGES, STREAKS, AND ACHIEVEMENTS
+
+Create a meaningful gamification system that encourages consistent positive action without encouraging dishonest reporting.
+
+## Points
+Award points for eligible activities such as:
+- Completing a learning module.
+- Passing a quiz.
+- Completing a challenge.
+- Participating in a campaign.
+- Submitting an eligible reflection.
+- Completing a verified activity.
+
+Make the point values configurable.
+
+Do not award duplicate points for the same eligible completion.
+
+## Badges
+
+Include badges such as:
+- First Step.
+- Learning Explorer.
+- Eco Champion.
+- Digital Safety Advocate.
+- Community Helper.
+- Healthy Habits.
+- Awareness Creator.
+- Campaign Contributor.
+- Seven-Day Streak.
+- Positive Change Champion.
+
+Award badges according to actual recorded progress.
+
+## Streaks
+
+Track consecutive days of qualifying activity.
+
+Define the streak rules clearly and handle dates consistently.
+
+Do not reset streaks incorrectly because the user briefly loses connectivity.
+
+## Achievements
+
+Display:
+- Achievement name.
+- Description.
+- Progress.
+- Unlock status.
+- Date earned, when applicable.
+
+---
+
+# 11. MY IMPACT DASHBOARD
+
+Build a dedicated impact-tracking screen.
+
+Display:
+- Total challenges completed.
+- Learning activities completed.
+- Points earned.
+- Badges unlocked.
+- Current streak.
+- Campaign participation.
+- Activity history.
+- Category-wise activity.
+- Weekly and monthly trends.
+
+Include clear charts and progress visualisations that work on Android screens.
+
+Provide filters for:
+- This week.
+- This month.
+- This year.
+- All time.
+
+Allow users to open an activity and see its details.
+
+## Proof of Impact framework
+
+CHANGE360 must distinguish between different types of evidence.
+
+Use these classifications:
+
+### 1. Learning Completed
+The user completed an educational activity or quiz.
+
+### 2. Self-Reported Action
+The user states that an activity was completed.
+
+### 3. Verified Activity
+A suitable verification method supports the activity, where verification is available.
+
+### 4. Measured Outcome
+A measurable result has been recorded using an appropriate method.
+
+Never automatically classify a self-reported action as verified.
+
+Never claim that a learning activity proves a real-world environmental, social, or health outcome.
+
+Never fabricate saved resources, volunteer hours, beneficiaries reached, carbon savings, or other impact statistics.
+
+Where there is insufficient data, show a clear message such as "Not enough data to calculate this impact yet."
+
+---
+
+# 12. SIGNATURE FEATURE: AI IMPACT POSTER GENERATOR
+
+This is one of the most important features of CHANGE360.
+
+Build a polished poster-creation tool that lets users create personalised awareness posters and impact summaries.
+
+The feature must work on an Android phone.
+
+## Poster types
+
+Include:
+
+### A. Daily Impact Poster
+Summarises eligible activities recorded for a selected day.
+
+### B. Weekly Impact Poster
+Summarises activities recorded during the selected week.
+
+### C. Monthly Impact Poster
+Summarises activities recorded during the selected month.
+
+### D. Custom Awareness Poster
+Lets users create a poster about any supported awareness topic.
+
+### E. School Campaign Poster
+Supports educational events, school clubs, classroom activities, and awareness drives.
+
+### F. Community Campaign Poster
+Supports local initiatives, volunteer activities, and community campaigns.
+
+## Poster creation workflow
+
+The user should be able to:
+1. Select a poster type.
+2. Select an awareness category.
+3. Choose a design template.
+4. Enter a title.
+5. Edit the main message.
+6. Add a call to action.
+7. Select a theme.
+8. Choose suitable colours.
+9. Add their display name or organisation name, optionally.
+10. Preview the poster.
+11. Edit the content.
+12. Generate the final image.
+13. Save the poster to the Android device.
+14. Share the image through Android's native sharing interface.
+
+## Poster templates
+
+Create multiple attractive templates:
+- Minimal modern.
+- Bold awareness campaign.
+- Educational infographic.
+- Environmental theme.
+- Community service theme.
+- Health awareness theme.
+- School activity theme.
+- Personal impact summary.
+
+Each template must have a distinct layout.
+
+## Poster design quality
+
+Posters should use:
+- Clear typography.
+- Proper spacing.
+- High contrast.
+- Visually attractive headings.
+- Structured information.
+- Suitable illustrations, icons, or shapes.
+- Balanced colours.
+- A clear call to action.
+
+Avoid overcrowding the poster.
+
+## AI-assisted content
+
+When live AI is configured, use it to help generate:
+- Titles.
+- Slogans.
+- Awareness messages.
+- Short educational explanations.
+- Calls to action.
+- Campaign descriptions.
+- Poster text.
+- Suggestions for suitable layouts.
+
+Allow users to edit AI-generated text before generating the final image.
+
+If AI is unavailable, provide editable sample text and built-in templates.
+
+## Native Android image generation
+
+Render the final poster as an actual image using Android-supported drawing and image APIs.
+
+Do not merely display a preview that cannot be exported.
+
+Generate a high-resolution PNG suitable for saving and sharing.
+
+Use Android MediaStore or an appropriate Android file-saving method.
+
+Handle storage permissions correctly for the target Android version.
+
+Show a clear success message after saving.
+
+Allow the user to share the saved image through Android's native share sheet.
+
+The poster generator must work without requiring a paid external image-generation service.
+
+If additional image-generation services are available, treat them as optional enhancements rather than requirements.
+
+## Impact data accuracy
+
+For daily, weekly, and monthly impact posters:
+- Retrieve figures from actual recorded activity data.
+- Clearly identify the selected date range.
+- Distinguish self-reported activities from verified activities.
+- Never invent statistics to make a poster look impressive.
+- Never present sample data as the user's real impact.
+- Provide a useful empty-state poster when the user has no recorded activities.
+
+Allow users to preview and edit their posters before saving.
+
+---
+
+# 13. CAMPAIGNS
+
+Build a campaigns section for schools, colleges, workplaces, NGOs, and local communities.
+
+Include sample campaigns such as:
+- Plastic-Free Week.
+- Digital Safety Awareness.
+- Road Safety Month.
+- Community Reading Drive.
+- Healthy Habits Challenge.
+- Local Biodiversity Awareness.
+- Mental Well-being Awareness.
+- Clean Neighbourhood Initiative.
+- Responsible Technology Week.
+
+Each campaign should include:
+- Campaign name.
+- Category.
+- Description.
+- Objectives.
+- Duration.
+- Suggested activities.
+- Participation instructions.
+- Progress indicators.
+- Poster-creation shortcut.
+
+Users should be able to explore a campaign and record their participation.
+
+For the initial version, use sample campaigns and local participation records.
+
+Design the data architecture so shared campaigns and multi-user participation can be supported later through a backend.
+
+Do not imply that a campaign is officially affiliated with an organisation unless that affiliation has actually been established.
+
+---
+
+# 14. IMPACT STORIES AND INSPIRATION
+
+Create an Impact Stories section featuring short, educational stories about positive action.
+
+Examples:
+- A school reducing single-use plastic.
+- Students organising a reading drive.
+- A community improving waste segregation.
+- Young people learning about cyber safety.
+- Volunteers supporting local biodiversity.
+
+Each story should include:
+- Title.
+- Category.
+- Short description.
+- Action taken.
+- Lessons learned.
+- Suggested action for the reader.
+
+Use clearly labelled fictional demonstration stories during development.
+
+Do not present fictional stories as verified real-world achievements.
+
+Allow users to save a story to their favourites.
+
+Where appropriate, provide a shortcut to related challenges.
+
+---
+
+# 15. USER PROFILE AND SETTINGS
+
+Create a profile screen with:
+- Display name.
+- Optional profile image.
+- Selected interests.
+- Activity statistics.
+- Earned badges.
+- Saved posters.
+- Saved stories.
+- Challenge history.
+
+Provide settings for:
+- Notification preferences.
+- Theme selection.
+- Content preferences.
+- Privacy settings.
+- Data export, where implemented.
+- Account sign-out, when authentication is configured.
+- Account deletion, when account functionality is configured.
+- Help and About.
+
+Allow users to use demo mode without providing personal information.
+
+Do not request unnecessary personal data.
+
+Do not require precise location access for core functionality.
+
+---
+
+# 16. DATABASE AND DATA PERSISTENCE
+
+Implement proper data persistence.
+
+The application must not lose its basic functionality when it is closed and reopened.
+
+Use Room for local structured data and DataStore for appropriate settings.
+
+When Firebase is configured, support cloud-backed user accounts and synchronisation.
+
+Create suitable data models for:
+
+- User profiles.
+- Awareness categories.
+- Challenges.
+- Challenge progress.
+- Quiz attempts.
+- Points transactions.
+- Badges.
+- Streaks.
+- Activity records.
+- Verification status.
+- Impact summaries.
+- Posters.
+- Campaigns.
+- Campaign participation.
+- Impact stories.
+- Saved content.
+- User preferences.
+
+Use stable identifiers for records.
+
+Prevent duplicate challenge rewards and duplicate completion transactions.
+
+Handle database errors and synchronisation conflicts appropriately.
+
+Separate demonstration data from real user data.
+
+Do not require a Firebase project merely to run the initial demo.
+
+If the backend is not configured, use local storage and clearly indicate which functions are local-only.
+
+---
+
+# 17. NOTIFICATIONS AND REMINDERS
+
+Implement optional Android notifications for:
+- Daily awareness suggestions.
+- Incomplete challenges.
+- Challenge reminders.
+- Campaign updates.
+- Achievement unlocks.
+- Streak reminders.
+
+Ask for notification permission where required.
+
+Allow users to disable notifications.
+
+Avoid sending excessive or manipulative reminders.
+
+Do not claim that push notifications work across devices unless the required backend and notification infrastructure are configured.
+
+---
+
+# 18. PRIVACY, SAFETY, AND RESPONSIBLE AI
+
+Treat privacy and safety as core product requirements.
+
+Implement the following principles:
+
+- Request only necessary permissions.
+- Explain why a permission is needed.
+- Do not expose API keys or backend secrets in the Android app.
+- Do not collect precise location unless a future feature genuinely requires it and the user explicitly consents.
+- Do not publish personal activity records without permission.
+- Provide clear controls for optional sharing.
+- Avoid exposing sensitive health or safety information in public profiles.
+- Avoid collecting unnecessary information about children.
+- Provide safe, respectful educational content.
+- Avoid victim-blaming in safety-related content.
+- Avoid unsupported medical claims.
+- Do not present the AI assistant as a substitute for emergency services, qualified medical professionals, or legal professionals.
+- Do not fabricate statistics, verification evidence, or impact claims.
+- Clearly label demo data.
+- Protect user records and use appropriate access controls.
+- Avoid logging private user messages or sensitive personal data unnecessarily.
+
+Design the app to be suitable for a broad audience, including students, while keeping age-related privacy and safeguarding requirements in mind.
+
+---
+
+# 19. DEMO MODE AND SAMPLE DATA
+
+The application must be usable immediately after installation without requiring the developer to configure every external service.
+
+Implement a functional demo mode.
+
+In demo mode:
+- Users can explore all major screens.
+- Users can browse sample challenges.
+- Users can start and complete eligible sample challenges.
+- Points and badges update.
+- Progress charts update.
+- Activity history updates.
+- Users can create and save posters.
+- Users can explore sample campaigns.
+- Users can save impact stories.
+- The assistant can provide clearly labelled demonstration responses.
+- Data persists locally where practical.
+
+Clearly label demonstration content and statistics.
+
+Do not confuse demonstration achievements with verified real-world impact.
+
+Provide a way to reset demo data from an appropriate settings or development screen.
+
+Do not require a login just to explore the application.
+
+---
+
+# 20. ERROR HANDLING AND ACCESSIBILITY
+
+Implement proper states for:
+- Loading.
+- Empty results.
+- Network failure.
+- AI service failure.
+- Database failure.
+- Invalid input.
+- Permission denial.
+- Poster-generation failure.
+- Image-saving failure.
+- Synchronisation failure.
+
+Show understandable error messages.
+
+Provide retry options when appropriate.
+
+Use accessible text sizes and content descriptions.
+
+Ensure important information is not communicated through colour alone.
+
+Test Android back navigation and screen transitions.
+
+Avoid crashes caused by missing data or unavailable services.
+
+---
+
+# 21. FUNCTIONAL ACCEPTANCE TESTS
+
+Before considering the project complete, verify these workflows.
+
+## Test 1: First launch
+The user opens CHANGE360 and can explore the app without creating an account.
+
+## Test 2: Challenge completion
+The user opens a challenge, starts it, completes it, and sees the correct updated status.
+
+## Test 3: Points and badges
+Eligible completion awards points exactly once and unlocks badges when their conditions are met.
+
+## Test 4: Persistence
+The user closes and reopens the application and retains saved local progress.
+
+## Test 5: AI assistant
+The user submits a question and receives a relevant response or a clearly labelled demo response if live AI is unavailable.
+
+## Test 6: Category filtering
+The user can filter challenges and educational content by category.
+
+## Test 7: Impact dashboard
+Completing an activity updates the corresponding dashboard figures and activity history.
+
+## Test 8: Poster generation
+The user creates a poster, previews it, generates a real PNG image, saves it to the device, and shares it.
+
+## Test 9: Empty-state poster
+A user with no recorded activities can create an attractive awareness poster without fabricated impact statistics.
+
+## Test 10: Campaign participation
+The user opens a campaign and records participation.
+
+## Test 11: Offline operation
+Core locally stored features remain usable without internet connectivity.
+
+## Test 12: Android navigation
+Bottom navigation, Android back navigation, scrolling, and screen transitions work correctly.
+
+## Test 13: Privacy settings
+The user can access and change the available privacy and notification settings.
+
+## Test 14: Responsive Android UI
+The app remains usable on different Android phone screen sizes and font scaling settings.
+
+## Test 15: Error recovery
+The app handles unavailable AI services, missing permissions, and failed image saving without crashing.
+
+---
+
+# 22. PROJECT DELIVERY REQUIREMENTS
+
+Generate the complete native Android project.
+
+The deliverable should include:
+
+- Kotlin source code.
+- Jetpack Compose UI.
+- Android navigation.
+- Gradle build files.
+- AndroidManifest.xml.
+- Required resources.
+- Local data models.
+- Room database implementation.
+- DataStore preferences.
+- Repository and ViewModel layers.
+- Demo data.
+- Challenge and reward logic.
+- Impact tracking.
+- Poster rendering and image saving.
+- AI integration structure.
+- Backend configuration instructions.
+- Error handling.
+- Basic tests for critical workflows.
+- Instructions for opening the project in Android Studio.
+- Instructions for running the app on an emulator or physical Android phone.
+- Instructions for creating an installable APK.
+- Instructions for preparing an Android App Bundle for Google Play distribution.
+
+Do not claim that the project compiles unless it has actually been built and checked.
+
+If the environment supports compilation, build the project and fix errors before presenting it as complete.
+
+If compilation is unavailable, identify any remaining build or configuration steps honestly.
+
+---
+
+# 23. DEVELOPMENT PRIORITIES
+
+Build the application in this order while maintaining one coherent project:
+
+**Priority 1 — Functional Android foundation**
+- Native Android project.
+- Navigation.
+- Home dashboard.
+- Demo mode.
+- Local persistence.
+- Basic profile and settings.
+
+**Priority 2 — Core CHANGE360 experience**
+- AI Awareness Assistant.
+- Challenges.
+- Points and badges.
+- My Impact dashboard.
+- Activity history.
+
+**Priority 3 — Signature features**
+- Native Impact Poster Generator.
+- Real PNG export.
+- Android image saving and sharing.
+- Campaigns.
+- Impact Stories.
+
+**Priority 4 — Production readiness**
+- Secure AI integration.
+- Optional authentication and cloud synchronisation.
+- Notifications.
+- Error handling.
+- Accessibility.
+- Tests.
+- Build and deployment instructions.
+
+Do not stop after generating the home screen.
+
+If the full implementation is too large for one generation, first create a compilable Android project with a coherent architecture and implement the core workflows end to end. Continue improving the same project rather than replacing it with unrelated examples or separate applications.
+
+---
+
+# FINAL INSTRUCTION
+
+Build CHANGE360 as a complete, native, Android-first social awareness application using Kotlin and Jetpack Compose.
+
+The app must be general-purpose, AI-assisted, activity-driven, privacy-conscious, and visually polished.
+
+Its central user journey is:
+
+**Discover an issue → Learn about it → Take meaningful action → Record the activity → Track progress → Create an impact poster → Inspire others.**
+
+The final result must be a real Android application project, not a website, not a static mockup, and not merely a design concept.
+
+Start by creating the Android project structure and implementing the first functional version of CHANGE360.
