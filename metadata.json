@@ -1,6 +1,0 @@
-{
-  "name": "Android M3 Scientific Calculator",
-  "description": "Production-ready Android Scientific Calculator app using Kotlin, Jetpack Compose, Material Design 3, RPN expression evaluator, scientific keypad, and history bottom sheet.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
